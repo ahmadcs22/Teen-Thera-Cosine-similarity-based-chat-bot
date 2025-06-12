@@ -15,7 +15,7 @@ CORS(app)  # Enable CORS for all routes
 # Load resources
 vectorizer = joblib.load('vectorizer.joblib')
 X = joblib.load('tfidf_matrix.joblib')
-qa_df = pd.read_csv('qa_dataset.csv')
+qa_df = pd.read_csv('cleaned_teen_theera_qna.csv')
 questions_list = qa_df['Questions'].tolist()
 answers_list = qa_df['Answers'].tolist()
 
