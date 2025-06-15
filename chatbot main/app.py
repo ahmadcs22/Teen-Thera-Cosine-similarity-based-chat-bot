@@ -29,7 +29,9 @@ def preprocess_with_stopwords(text):
     lemmatized = [lemmatizer.lemmatize(token) for token in tokens]
     stemmed = [stemmer.stem(token) for token in lemmatized]
     return ' '.join(stemmed)
-
+@app.route('/', methods=['POST'])
+def home():
+    return "home"
 @app.route('/chat', methods=['POST'])
 def chat():
     user_input = request.json.get('message', '')
